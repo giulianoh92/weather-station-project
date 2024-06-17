@@ -21,15 +21,9 @@ El objetivo principal de este proyecto era crear una solución práctica y funci
 2. **NodeMCU**: Recibe datos del Arduino, se conecta a Wi-Fi y los envía a Firebase.
 3. **Firebase**: Almacena datos en tiempo real y permite su acceso desde una aplicación web.
 
-## Diagrama de Conexiones Físicas
-
-![Diagrama de Conexiones Físicas](https://drive.google.com/file/d/1-UAaJwjOcxqlqXzhrGDJLbMoAPQItJzh/view?usp=sharing)
-
-Este diagrama muestra cómo están conectados físicamente los componentes de la estación meteorológica.
-
 ## Enlaces
 
-- **Repositorio GitHub**: [https://github.com/giulianoh92/weather-station-project.git](https://github.com/giulianoh92/weather-station-project.git)
+- **Trabajo Integrador Escrito**: [https://drive.google.com/file/d/1-UAaJwjOcxqlqXzhrGDJLbMoAPQItJzh/view?usp=sharing](https://drive.google.com/file/d/1-UAaJwjOcxqlqXzhrGDJLbMoAPQItJzh/view?usp=sharing)
 - **Página Web de Visualización de Datos**: [https://weather-stationg06.web.app/](https://weather-stationg06.web.app/)
 
 ## Resultados y Conclusiones
