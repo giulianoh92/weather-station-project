@@ -1,0 +1,32 @@
+{
+
+  "rules": {
+
+    "mediciones": {
+      ".read": "auth == null",
+      ".write": "auth != null"
+    },
+
+    "users": {
+
+      "$uid": {
+
+        ".read": "auth != null && auth.uid == $uid",
+
+        ".write": "auth != null && auth.uid == $uid"
+
+      }
+
+    },
+
+    "admin": {
+
+      ".read": "auth != null && auth.token.admin === true",
+
+      ".write": "auth != null && auth.token.admin === true"
+
+    }
+
+  }
+
+}

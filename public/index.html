@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estación Meteorológica en tiempo real</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Estación Meteorológica en tiempo real</h1>
+    <div class="contenedor">
+        <div id="medicion-actual"></div>
+    </div>
+
+
+    <div class="graficos">
+        <canvas id="temperatura-chart" width=auto height="100"></canvas>
+        <canvas id="humedad-chart" width=auto height="100"></canvas>
+        <canvas id="luminosidad-chart" width=auto height="100"></canvas>
+        <canvas id="velocidad-viento-chart" width=auto height="100"></canvas>
+    </div>
+    
+    <div class="tabla-container">
+      <h2>Promedios por Hora</h2>
+      <h3>Últimas 24 Horas</h3>
+      <table id="tabla-promedios">
+        <thead>
+            <tr>
+                <th>Hora</th>
+                <th>Temperatura Media (°C)</th>
+                <th>Humedad Media (%)</th>
+                <th>Luminosidad Media</th>
+                <th>Velocidad Viento Media (km/h)</th> <!-- Actualizado el nombre del campo -->
+            </tr>
+        </thead>
+          <tbody>
+              <!-- Aquí se llenarán las filas con los promedios -->
+          </tbody>
+      </table>
+  </div>
+  <div class="tabla-container">
+    <h2>Promedios por Día</h2>
+    <h3>Últimos 7 Días</h3>
+    <table id="tabla-promedios-diarios">
+      <thead>
+          <tr>
+              <th>Día</th>
+              <th>Temperatura Media (°C)</th>
+              <th>Humedad Media (%)</th>
+              <th>Luminosidad Media</th>
+              <th>Velocidad Viento Media (km/h)</th> <!-- Actualizado el nombre del campo -->
+          </tr>
+      </thead>
+        <tbody>
+            <!-- Aquí se llenarán las filas con los promedios diarios -->
+        </tbody>
+    </table>
+
+    <button id="descargarJson">Descargar Datos JSON</button>
+    <button id="descargarCsv">Descargar Datos CSV</button>
+
+  </div>
+  <footer class="footer">
+    <p>&copy; Giuliano Hillebrand - 2023 - Estación Meteorológica</p>
+  </footer>  
+  <script src="script.js"></script>
+</body>
+</html>
